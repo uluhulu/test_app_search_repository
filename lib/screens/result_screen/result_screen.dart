@@ -40,8 +40,8 @@ class _ResultScreenState extends State<ResultScreen> {
     return ListView(
       children: [
         ResultHeader(
-          queryName: "asshole",
-          resultsCount: 10,
+          queryName: widget.query,
+          resultsCount: widget.repositories.length,
         ),
         for (var repo in widget.repositories) ResultCard(repository: repo),
       ],

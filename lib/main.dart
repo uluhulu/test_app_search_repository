@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:test_app_search_repository/constants/color.dart';
+import 'package:test_app_search_repository/constants/style.dart';
+import 'package:test_app_search_repository/di.dart';
+import 'package:test_app_search_repository/screens/search_screen/search_screen.dart';
 
 void main() {
   initDi();
@@ -12,7 +16,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-
         primaryColor: primaryColor,
         backgroundColor: backgroundColor,
         inputDecorationTheme: theme,
