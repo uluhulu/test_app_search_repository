@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:test_app_search_repository/constants/color.dart';
+import 'package:test_app_search_repository/data/search/model/repositories.dart';
 import 'package:test_app_search_repository/screens/result_screen/widget/result_card/widget/result_card_body.dart';
 import 'package:test_app_search_repository/screens/result_screen/widget/result_card/widget/star_thumbnail.dart';
+import 'package:test_app_search_repository/util/date_util.dart';
 
 class ResultCard extends StatelessWidget {
-  final int starCount;
-  final String repoName;
+  final Repository repository;
 
   const ResultCard({
     Key key,
-    this.starCount,
-    this.repoName,
+    this.repository,
   }) : super(key: key);
 
   @override
@@ -37,10 +37,12 @@ class ResultCard extends StatelessWidget {
           ),
           child: Stack(
             children: [
-              StarThumbnail(starCount: 60),
+              StarThumbnail(starCount: repository.stargazersCount),
               ResultCardBody(
-                repoName: 'asshole',
-                userName: "shit",
+                repoName: repository.name,
+                userName: repository.owner.login,
+                avatarUrl: repository.owner.avatarUrl,
+                date: DateUtil.getDate(repository.updatedAt),
               ),
             ],
           ),

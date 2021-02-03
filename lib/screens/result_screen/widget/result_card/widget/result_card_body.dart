@@ -7,11 +7,15 @@ import 'package:test_app_search_repository/constants/text.dart';
 class ResultCardBody extends StatelessWidget {
   final String repoName;
   final String userName;
+  final String avatarUrl;
+  final String date;
 
   const ResultCardBody({
     Key key,
     this.repoName,
     this.userName,
+    this.avatarUrl,
+    this.date,
   }) : super(key: key);
 
   @override
@@ -56,7 +60,7 @@ class ResultCardBody extends StatelessWidget {
         shape: BoxShape.circle,
         image: new DecorationImage(
           fit: BoxFit.fill,
-          image: new NetworkImage("https://i.imgur.com/BoN9kdC.png"),
+          image: new NetworkImage(avatarUrl),
         ),
       ),
     );
@@ -84,8 +88,7 @@ class ResultCardBody extends StatelessWidget {
         style: updateTextStyle,
         children: [
           TextSpan(
-            ///todo parse date
-            text: '3 января',
+            text: date,
             style: updateText2Style,
           ),
         ],
