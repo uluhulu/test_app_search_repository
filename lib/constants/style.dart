@@ -22,3 +22,41 @@ final appBarTextStyle = TextStyle(
   fontSize: 14,
   fontWeight: FontWeight.w600,
 );
+
+final queryHeaderGreyStyle = TextStyle(
+  fontSize: 10,
+  fontWeight: FontWeight.w600,
+  color: queryHeaderGreyColor,
+);
+
+final queryHeaderBlueStyle = queryHeaderGreyStyle.copyWith(
+  color: queryHeaderBlueColor,
+);
+
+final starCountStyle = TextStyle(
+  fontSize: 10,
+  fontWeight: FontWeight.w600,
+  color: starCountColor,
+);
+
+final repoNameStyle = TextStyle(
+  fontSize: 12,
+  fontWeight: FontWeight.w600,
+  color: repoNameColor,
+);
+
+final userNameStyle = TextStyle(
+  fontSize: 10,
+  fontWeight: FontWeight.w400,
+  color: userNameColor,
+);
+
+final updateTextStyle = TextStyle(
+  fontSize: 10,
+  color: updateTextColor,
+);
+
+final updateText2Style = TextStyle(
+  fontSize: 10,
+  color: updateText2Color,
+);
